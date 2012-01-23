@@ -1,7 +1,7 @@
 Projekt::Application.routes.draw do
   match '/home', :to => 'pages#home'
-  match '/profile',   :to => 'pages#about'
-  match '/about',    :to => 'pages#about'
+  match '/profile', :to => 'pages#profile'
+  match '/about', :to => 'pages#about'
 
   devise_for :users
 

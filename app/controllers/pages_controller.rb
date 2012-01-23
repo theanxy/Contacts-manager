@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:home, :about]
   def home
   end
 
