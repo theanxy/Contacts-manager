@@ -136,7 +136,7 @@ table {
 ------------------------------------------------------------------------------*/
 
 body {
-	font: 75%/1.25 Arial, Helvetica, sans-serif;
+	font: 75%/1.4 'Ubuntu', Arial, Helvetica, sans-serif;
 	color: #333;
 	background: #fff;
 }
@@ -232,12 +232,17 @@ a:hover, a:active, a:focus {
 	position: relative;
 	width: 960px;
 	margin: 0 auto;
+	font-size: 14px;
 }
 
 
 /* 2.2 Header
 ------------------------------------------------------------------------------*/
 
+#header {
+	background: #ddd;
+	margin: 0 0 50px;
+}
 #header .site-name {
 	width: 150px;
 	height: 50px;
@@ -264,8 +269,9 @@ a:hover, a:active, a:focus {
 ------------------------------------------------------------------------------*/
 
 #content {
-	float: right;
-	width: 760px;
+
+
+
 }
 
 
@@ -283,6 +289,7 @@ a:hover, a:active, a:focus {
 
 #footer {
 	clear: both;
+	margin: 50px 0 0;
 }
 
 
