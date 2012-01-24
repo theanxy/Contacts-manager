@@ -1,4 +1,5 @@
 Projekt::Application.routes.draw do
+  resources :cards, :only => [:index, :show, :new, :create, :edit, :delete]
   get "cards/index"
 
   get "cards/show"
@@ -17,7 +18,8 @@ Projekt::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "pages#home"
+  # root :to => "pages#home"
+  root :to => "cards#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

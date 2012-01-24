@@ -1,2 +1,16 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+Add card
+
+<%= form_for @card do |f| %>
+	<% if @card.errors.any? %>
+	<ul>
+		<% @card.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+	<p>
+		<%= f.label :name, "Name:" %><br>
+		<%= f.text_field :name %>
+	</p>
+	<%= f.submit "Add"%>
+<% end %>
