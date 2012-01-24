@@ -1,7 +1,9 @@
-Card list
+<h3>Card list</h3>
 
+<ul>
 <% @cards.each do |card| %>
-	<%= card.name %>
+	<li><%= card.name %></li>
 <% end -%>
+</ul>
 
 <%= link_to "New card", cards_new_path %>
