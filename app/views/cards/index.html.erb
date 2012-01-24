@@ -1,14 +1,23 @@
-<h3>Card list</h3>
-
-<ul>
-<% @cards.each do |card| %>
-	<li>
-		<%= card.name %>
-		<% if !card.website.blank? %>
-		<%= link_to card.website, card.website %>
-		<%end %>
-	</li>
-<% end -%>
-</ul>
-
-<%= link_to "New card", cards_new_path %>
+<h2>Available profiles</h2>
+	
+<div class="three columns">
+	<p>Choose one of the profiles</p>
+	<select>
+		<% @cards.each do |card| %>
+			<option><%= card.name %></option>
+		<% end -%>
+	</select>
+</div>
+<div class="ten columns" id="profile">
+	<ul>
+	<% @cards.each do |card| %>
+		<li><%= card.name %></li>
+		<li><% if !card.website.blank? %><%= card.website %><% else %>no website<% end%> </li>
+	<% end -%>
+	</ul>
+	
+	<a href="#">Download the data</a>
+</div>
+<div class="three columns">
+<h5>Recent activity</h5>
+</div>

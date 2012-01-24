@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @users = User.order("created_at DESC")
+    @cards = Card.order("created_at DESC")
   end
 
   def about

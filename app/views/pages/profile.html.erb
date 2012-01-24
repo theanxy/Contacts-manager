@@ -3,17 +3,21 @@
 <div class="three columns">
 	<p>Choose one of the profiles</p>
 	<select>
-		<% @users.each do |user| %>
-			<option><%= user.email %></option>
+		<% @cards.each do |card| %>
+			<option><%= card.name %></option>
 		<% end -%>
 	</select>
+	
+	<p>or… <br><%= link_to "Create new card", new_card_path %></p>
 </div>
 <div class="ten columns" id="profile">
+	<% card = @cards.find(2) %>
+	<h3><%= card.name %></h3>
 	<ul>
-	<% @users.each do |user| %>
-		<li><%= user.email %></li>
-		<li><% if !user.website.blank? %><%= user.website %><% else %>no website<% end%> </li>
-	<% end -%>
+		<li><strong>Website:</strong> <% if !card.website.blank? %><%= link_to card.website, card.website %><% else %>no website<% end%> </li>
+		<li><strong>Photo:</strong></li>
+		<li><strong>Address:</strong></li>
+		<li><strong></strong></li>
 	</ul>
 	
 	<a href="#">Download the data</a>
