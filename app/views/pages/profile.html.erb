@@ -1,14 +1,14 @@
-<h2>Dostępne profile</h2>
+<h2>Available profiles</h2>
 	
 <div class="three columns">
-	<p>Wybierz firmę, której wizytówki chcesz wybrać</p>
+	<p>Choose one of the profiles</p>
 	<select>
 		<% @users.each do |user| %>
 			<option><%= user.email %></option>
 		<% end -%>
 	</select>
 </div>
-<div class="ten columns"	
+<div class="ten columns" id="profile">
 	<ul>
 	<% @users.each do |user| %>
 		<li><%= user.email %></li>
@@ -16,8 +16,8 @@
 	<% end -%>
 	</ul>
 	
-	<a href="#">Pobierz na dysk</a>
+	<a href="#">Download the data</a>
 </div>
 <div class="three columns">
-<h5>Najnowsze wpisy</h5>
+<h5>Recent activity</h5>
 </div>
