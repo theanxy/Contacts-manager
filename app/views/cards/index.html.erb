@@ -2,7 +2,12 @@
 
 <ul>
 <% @cards.each do |card| %>
-	<li><%= card.name %></li>
+	<li>
+		<%= card.name %>
+		<% if !card.website.blank? %>
+		<%= link_to card.website, card.website %>
+		<%end %>
+	</li>
 <% end -%>
 </ul>
 
