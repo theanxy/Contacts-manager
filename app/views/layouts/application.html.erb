@@ -4,8 +4,18 @@
 <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
 <head>
 	<title>Business card manager - Home</title>
-	<%= stylesheet_link_tag 'main' %>
+	
+	<%= stylesheet_link_tag 'base' %>
+	<%= stylesheet_link_tag 'skeleton' %>
+	<%= stylesheet_link_tag 'layout' %>
+
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<%= csrf_meta_tags %>
 </head>
 <body class="no-js">
