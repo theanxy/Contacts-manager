@@ -1,4 +1,16 @@
 Projekt::Application.routes.draw do
+  get "cards/index"
+
+  get "cards/show"
+
+  get "cards/new"
+
+  get "cards/create"
+
+  get "cards/edit"
+
+  get "cards/delete"
+
   match '/home', :to => 'pages#home'
   match '/profile', :to => 'pages#profile'
   match '/about', :to => 'pages#about'
