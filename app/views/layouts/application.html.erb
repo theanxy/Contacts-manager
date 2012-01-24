@@ -2,11 +2,15 @@
 <html>
 <head>
   <title>Projekt</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'main', :media => 'screen' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1><%= link_to "Home", root_path %></h1>
+<ul>
+	<li><%= link_to "Profile", profile_path %></li>
+	<li><%= link_to "About", about_path %></li>
+</ul>
 <div id="user_nav">
   <% if user_signed_in? %>
     Signed in as <%= current_user.email %>. Not you?

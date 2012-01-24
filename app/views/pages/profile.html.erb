@@ -1,2 +1,6 @@
-<h1>Pages#profile</h1>
-<p>Find me in app/views/pages/profile.html.erb</p>
+<h2>Dostępne profile</h2>
+<ul>
+<% @users.each do |user| %>
+	<li><%= user.email %></li>
+<% end -%>
+</ul>
