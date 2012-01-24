@@ -43,6 +43,19 @@
 	hr {
 		display: none;
 	}
+	
+	
+	
+	#menu li {
+		display: inline-block;
+	}
+	
+	
+	
+	#footer {
+		clear: both;
+		padding: 100px 0 0;
+	}
 
 
 /* #Page Styles

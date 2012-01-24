@@ -1,7 +1,23 @@
 <h2>Dostępne profile</h2>
-<ul>
-<% @users.each do |user| %>
-	<li><%= user.email %></li>
-	<li><% if !user.website.blank? %><%= user.website %><% else %>no website<% end%> </li>
-<% end -%>
-</ul>
+	
+<div class="three columns">
+	<p>Wybierz firmę, której wizytówki chcesz wybrać</p>
+	<select>
+		<% @users.each do |user| %>
+			<option><%= user.email %></option>
+		<% end -%>
+	</select>
+</div>
+<div class="ten columns"	
+	<ul>
+	<% @users.each do |user| %>
+		<li><%= user.email %></li>
+		<li><% if !user.website.blank? %><%= user.website %><% else %>no website<% end%> </li>
+	<% end -%>
+	</ul>
+	
+	<a href="#">Pobierz na dysk</a>
+</div>
+<div class="three columns">
+<h5>Najnowsze wpisy</h5>
+</div>

@@ -8,13 +8,13 @@
 <!-- / accessibility-nav -->
 <hr />
 
-<header id="header">
-	<h1><%= link_to "Home", root_path %></h1>
-	<ul>
+<header class="clearfix">
+	<h1><%= link_to "Manager Wizytówek", root_path %></h1>
+	<ul class="six columns" id="menu">
 		<li><%= link_to "Profile", profile_path %></li>
 		<li><%= link_to "About", about_path %></li>
 	</ul>
-	<div id="user_nav">
+	<div class="six columns" id="user_nav">
 	  <% if user_signed_in? %>
 	    Signed in as <%= current_user.email %>. Not you?
 	    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
