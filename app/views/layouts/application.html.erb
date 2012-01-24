@@ -7,17 +7,31 @@
 	<%= stylesheet_link_tag 'main' %>
  	<%= csrf_meta_tags %>
 </head>
-<body>
+<body class="no-js">
+
+<div class="container">
+	
 <%= render 'layouts/header' %>
 
-<%= notice %>
-<%= alert %>
+<% if !notice.blank? %>
+	<div class="msg notice"><%= notice %></div>
+<% elsif !alert.blank? %>
+ 	<div class="msg alert"><%= alert %></div>
+<% end %>
+
+<div id="content">
 <%= yield %>
+</div>
+<!-- / content -->
+<hr />
 
 <%= render 'layouts/footer' %>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write("<script src='_ui/js/jquery-1.7.1.min.js'>\x3C/script>")</script>
-	<script src="assets/main.js"></script>
+</div>
+<!-- / container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='_ui/js/jquery-1.7.1.min.js'>\x3C/script>")</script>
+<script src="assets/main.js"></script>
 </body>
 </html>
