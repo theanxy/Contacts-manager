@@ -1,0 +1,327 @@
+/*******************************************************************************
+
+	CSS on Sails Framework
+	Title: Business card manager
+	Author: XHTMLized (http://www.xhtmlized.com/)
+	Date: January 2012
+
+********************************************************************************
+
+	1. BASE
+		1.1 Reset
+		1.2 Accessibility Navigation & Hide
+		1.3 Clearfix
+		1.4 Fonts
+		1.5 Default Styles
+		1.6 Image Replacement		
+
+	2. COMMON
+		2.1 Container
+		2.2 Header
+		2.3 Navigation
+		2.4 Content
+		2.5 Sidebar
+		2.6 Footer
+
+	3. PAGES
+		3.1 Home
+
+
+	4. PRINT
+
+*******************************************************************************/
+
+
+/* 1. BASE
+--------------------------------------------------------------------------------
+==============================================================================*/
+
+
+/* 1.1 Reset
+------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 1.2 Accessibility Navigation & Hide
+------------------------------------------------------------------------------*/
+
+#accessibility-nav {
+	position: absolute;
+	top: 0;
+	left: -9999em;
+	z-index: 1000;
+}
+
+#accessibility-nav a {
+	position: absolute;
+	top: 0;
+	white-space: nowrap;
+}
+
+#accessibility-nav a:active,
+#accessibility-nav a:focus {
+	left: 9999em;
+}
+
+.hide {
+	position: absolute !important;
+	left: -9999em !important;
+}
+
+
+/* 1.3 Clearfix
+------------------------------------------------------------------------------*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+}
+
+.ie7 .clearfix {
+	zoom: 1; 
+}
+
+
+/* 1.4 Fonts
+------------------------------------------------------------------------------*/ 
+
+
+/* 1.5 Default Styles
+------------------------------------------------------------------------------*/
+
+body {
+	font: 75%/1.25 Arial, Helvetica, sans-serif;
+	color: #333;
+	background: #fff;
+}
+
+hr {
+	display: none;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+th, td {
+	vertical-align: top;
+}
+
+th {
+	font-weight: normal;
+	text-align: left;
+}
+
+address, cite, dfn {
+	font-style: normal;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #999;
+	cursor: help;
+}
+
+input, textarea, select {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+	 overflow: auto;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #00f;
+	
+}
+
+a:hover, a:active, a:focus {
+	text-decoration: underline;
+	color: #f00;
+}
+
+
+/* 1.6 Image replacement
+------------------------------------------------------------------------------*/
+
+.ir {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.ir span {
+	display: block;
+	position: absolute;	
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.ie7 .ir a span,
+.ie7 a.ir span {
+	cursor: pointer;
+}
+
+
+/* 2. COMMON
+--------------------------------------------------------------------------------
+==============================================================================*/
+
+
+/* 2.1 Container
+------------------------------------------------------------------------------*/
+
+.container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/* 2.2 Header
+------------------------------------------------------------------------------*/
+
+#header .site-name {
+	width: 150px;
+	height: 50px;
+}
+
+#header .site-name span {
+	background: url(../images/common/logo.png) no-repeat;
+}
+
+
+/* 2.3 Navigation
+------------------------------------------------------------------------------*/
+
+#navigation li {
+	
+}
+
+#navigation a {
+	
+}
+
+
+/* 2.4 Content
+------------------------------------------------------------------------------*/
+
+#content {
+	float: right;
+	width: 760px;
+}
+
+
+/* 2.5 Sidebar
+------------------------------------------------------------------------------*/
+
+#sidebar {
+	float: left;
+	width: 200px;
+}
+
+
+/* 2.6 Footer
+------------------------------------------------------------------------------*/
+
+#footer {
+	clear: both;
+}
+
+
+
+
+
+/* 3.1 Home
+------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* 4. PRINT
+--------------------------------------------------------------------------------
+==============================================================================*/
+
+
+@media print {
+
+	body { 
+		font: normal normal 12pt/1.5em "Times New Roman", Times, serif; 
+	}
+
+	a[href]:after { 
+		content: " (" attr(href) ") "; 
+		font-size: 90%; 
+	}
+
+	a[href^="/"]:after { 
+		content: " (http://domain.com" attr(href) ") "; 
+	}
+
+	#accessibility-nav, 
+	.hide { 
+		display: none !important; 
+	}
+}

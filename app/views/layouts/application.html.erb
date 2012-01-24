@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
 <head>
-  <title>Projekt</title>
-  <%= stylesheet_link_tag 'main', :media => 'screen' %>
-  <%= csrf_meta_tags %>
+	<title>Business card manager - Home</title>
+	<%= stylesheet_link_tag 'main' %>
+ 	<%= csrf_meta_tags %>
 </head>
 <body>
-<h1><%= link_to "Home", root_path %></h1>
-<ul>
-	<li><%= link_to "Profile", profile_path %></li>
-	<li><%= link_to "About", about_path %></li>
-</ul>
-<div id="user_nav">
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-  <% end %>
-</div>
+<%= render 'layouts/header' %>
 
 <%= notice %>
 <%= alert %>
 <%= yield %>
 
+<%= render 'layouts/footer' %>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write("<script src='_ui/js/jquery-1.7.1.min.js'>\x3C/script>")</script>
+	<script src="assets/main.js"></script>
 </body>
 </html>
