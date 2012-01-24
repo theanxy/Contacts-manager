@@ -2,5 +2,6 @@
 <ul>
 <% @users.each do |user| %>
 	<li><%= user.email %></li>
+	<li><% if !user.website.blank? %><%= user.website %><% else %>no website<% end%> </li>
 <% end -%>
 </ul>
