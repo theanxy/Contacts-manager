@@ -5,7 +5,8 @@ class CardsController < ApplicationController
   end
 
   def show
-    @card = Card.first
+    @cards = Card.order("created_at DESC")
+    @card = Card.find(params[:id])
   end
 
   def new
@@ -23,6 +24,7 @@ class CardsController < ApplicationController
   end
 
   def edit
+    @card = Card.find(params[:id])
   end
 
   def delete

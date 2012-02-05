@@ -1,12 +1,7 @@
-<h2>Available profiles</h2>
+<h2>Available cards</h2>
 	
 <div class="three columns">
-	<p>Choose one of the profiles</p>
-	<select>
-		<% @cards.each do |card| %>
-			<option><%= card.name %></option>
-		<% end -%>
-	</select>
+	<%= render 'cards/list' %>
 </div>
 <div class="ten columns" id="profile">
 	<ul>

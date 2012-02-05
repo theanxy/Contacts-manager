@@ -1,2 +1,22 @@
-<h1>Cards#edit</h1>
-<p>Find me in app/views/cards/edit.html.erb</p>
+<h3>Edit card</h3>
+
+<%= link_to "Back to card view", card_path %>
+
+<%= form_for @card do |f| %>
+	<% if @card.errors.any? %>
+	<ul>
+		<% @card.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+	<p>
+		<%= f.label :name, "Name:" %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :website, "Website:" %><br>
+		<%= f.text_field :website %>
+	</p>
+	<%= f.submit "Add"%>
+<% end %>
