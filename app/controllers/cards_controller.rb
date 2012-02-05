@@ -37,6 +37,7 @@ class CardsController < ApplicationController
   end
 
   def destroy
+    Card.find(params[:id]).delete
     redirect_to :action => "index"
   end
 
