@@ -1,8 +1,6 @@
 Projekt::Application.routes.draw do
   resources :cards
 
-
-
   match '/home', :to => 'pages#home'
   match '/profile', :to => 'pages#profile'
   match '/about', :to => 'pages#about'

@@ -27,7 +27,17 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
-  def delete
+  def update
+    @card = Card.find(params[:id])
+    if @card.update_attributes(params[:card])
+       redirect_to :action => 'show'
+    else
+       render :action => 'edit'
+    end
+  end
+
+  def destroy
+    redirect_to :action => "index"
   end
 
 end
