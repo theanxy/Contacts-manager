@@ -6,7 +6,7 @@
 <div class="ten columns" id="profile">
 	<h3><%= @card.name %></h3>
 	<%= link_to "Edit card", edit_card_path %>
-	<%= link_to "Delete card", cards_delete_path %>
+	<%= link_to "Delete card", '', :method => :delete %>
 	<ul>
 		<li><strong>Website:</strong> <% if !@card.website.blank? %><%= link_to @card.website, @card.website %><% else %>no website<% end%> </li>
 		<li><strong>Photo:</strong></li>
