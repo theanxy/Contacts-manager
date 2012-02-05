@@ -2,7 +2,7 @@
 
 <%= link_to "Back to card view", card_path %>
 
-<%= form_for @card do |f| %>
+<%= form_for @card, :html => { :multipart => true } do |f| %>
 	<% if @card.errors.any? %>
 	<ul>
 		<% @card.errors.full_messages.each do |msg| %>
@@ -54,5 +54,6 @@
 		<%= f.label :photo, "Photo:" %><br>
 		<%= f.text_field :photo %>
 	</p>
+	<%= form.file_field :avatar %>
 	<%= f.submit "Edit"%>
 <% end %>
