@@ -5,7 +5,7 @@ Projekt::Application.routes.draw do
   match '/profile', :to => 'pages#profile'
   match '/about', :to => 'pages#about'
 
-  devise_for :users, :controllers => { :sessions => "users/sessions" }
+  devise_for :users
 
   root :to => "pages#home"
   # root :to => "cards#index"
