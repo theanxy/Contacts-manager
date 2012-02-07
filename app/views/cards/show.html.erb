@@ -14,6 +14,10 @@
 		<li><strong></strong></li>
 	</ul>
 	
+	<%= image_tag @card.avatar.url %>
+	<%= image_tag @card.avatar.url(:medium) %>
+	<%= image_tag @card.avatar.url(:thumb) %>
+	
 	<a href="#">Download the data</a>
 </div>
 <div class="three columns">
