@@ -8,50 +8,62 @@
 		<% end %>
 	</ul>
 	<% end %>
-	<p>
-		<%= f.label :name, "Name:" %><br>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-		<%= f.label :company, "Company:" %><br>
-		<%= f.text_field :company %>
-	</p>
-	<p>
-		<%= f.label :phone, "Phone:" %><br>
-		<%= f.text_field :phone %>
-	</p>
-	<p>
-		<%= f.label :street, "Street:" %><br>
-		<%= f.text_field :street %>
-	</p>
-	<p>
-		<%= f.label :city, "City:" %><br>
-		<%= f.text_field :city %>
-	</p>
-	<p>
-		<%= f.label :postal, "postal:" %><br>
-		<%= f.text_field :postal %>
-	</p>
-	<p>
-		<%= f.label :website, "Website:" %><br>
-		<%= f.text_field :website %>
-	</p>
-	<p>
-		<%= f.label :twitter, "Twitter:" %><br>
-		<%= f.text_field :twitter %>
-	</p>
-	<p>
-		<%= f.label :flickr, "Flickr:" %><br>
-		<%= f.text_field :flickr %>
-	</p>
-	<p>
-		<%= f.label :facebook, "Facebook:" %><br>
-		<%= f.text_field :facebook %>
-	</p>
-	<p>
-		<%= f.label :photo, "Photo:" %><br>
-		<%= f.text_field :photo %>
-	</p>
-	<%= f.file_field :avatar %>
+	<ul class="tabs">
+		<li><a class="active" href="#personal">Personal details</a></li>
+		<li><a href="#address">Address</a></li>
+		<li><a href="#websites">Websites</a></li>
+	</ul>
+	
+	<ul class="tabs-content">
+		<li class="active" id="personal">
+			<p>
+				<%= f.label :name, "Name:" %><br>
+				<%= f.text_field :name %>
+			</p>
+			<p>
+				<%= f.label :company, "Company:" %><br>
+				<%= f.text_field :company %>
+			</p>
+			<p>
+				<%= f.label :phone, "Phone:" %><br>
+				<%= f.text_field :phone %>
+			</p>
+			<%= f.file_field :avatar %>
+		</li>
+		<li id="address">
+			<p>
+				<%= f.label :street, "Street:" %><br>
+				<%= f.text_field :street %>
+			</p>
+			<p>
+				<%= f.label :city, "City:" %><br>
+				<%= f.text_field :city %>
+			</p>
+			<p>
+				<%= f.label :postal, "postal:" %><br>
+				<%= f.text_field :postal %>
+			</p>
+		</li>
+		<li id="websites">
+			<p>
+				<%= f.label :website, "Website:" %><br>
+				<%= f.text_field :website %>
+			</p>
+			<p>
+				<%= f.label :twitter, "Twitter:" %><br>
+				<%= f.text_field :twitter %>
+			</p>
+			<p>
+				Find your ID using <a href="http://idgettr.com/" title="idGettr &mdash; Find your Flickr ID">http://idgettr.com/</a>
+				<%= f.label :flickr, "Flickr:" %><br>
+				<%= f.text_field :flickr %>
+			</p>
+			<p>
+				<%= f.label :facebook, "Facebook:" %><br>
+				<%= f.text_field :facebook %>
+			</p>
+		</li>
+	</ul>
+	
 	<%= f.submit "Add"%>
 <% end %>
