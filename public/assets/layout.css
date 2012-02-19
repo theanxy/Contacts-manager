@@ -51,6 +51,10 @@
 		padding: .8em;
 	}
 	
+	img, object {
+		max-width: 100%;
+	}
+	
 	h1 {
 		text-align: center;
 		margin: 10px 0 40px;
@@ -63,11 +67,29 @@
 		margin: 20px 0 30px;
 	}
 	
+	header nav {
+		background: #eee;
+		color: #fff;
+		margin-bottom: 40px;
+		width: 100%;
+		padding: 10px 20px;
+		-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+		border-radius: 10px;		
+	}
+	#menu {
+		float: left;
+		line-height: 21px;
+		padding: 4px 0;
+		margin-bottom: 0;
+	}
 	#menu li {
 		display: inline-block;
 		margin-right: 20px;
 		border-right: 1px solid #ccc;
 		padding-right: 20px;
+		margin-bottom: 0;
 	}
 	#menu li:last-child {
 		border: 0;
@@ -76,6 +98,10 @@
 	#user_nav {
 		float: right;
 		text-align: right;
+		color: #333;
+	}
+	#user_nav a {
+		margin: 0;
 	}
 	
 	#content {
@@ -87,21 +113,6 @@
 		clear: both;
 		padding: 100px 0 0;
 	}
-
-
-	/* Flickr badge defaults styles */
-	#flickr {
-		clear: both;
-		padding-top: 100px;
-	}
-	#flickr a {
-		margin: 0 10px 0 0;
-	}
-	#flickr p {
-		margin: 0 0 10px;
-		font: 11px Arial, Helvetica, Sans serif
-	}
-
 
 
 
@@ -122,11 +133,38 @@
         box-sizing: border-box;
 		border-radius: 10px;
 	}
-	
+	#profile h2 {
+		margin: .5em 0 0;
+	}
+	#profile .company {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 0 0 2em;
+	}
 	.thumb {
 		position: absolute;
 		top: 20px;
 		right: 20px;
+	}
+	
+	/* Flickr badge defaults styles */
+	#flickr {
+		clear: both;
+		margin: 100px 0 0 0;
+		background: #f9f9f9;
+		border: 1px solid #999;
+		padding: 15px 20px;
+		-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+		border-radius: 10px;
+	}
+	#flickr a {
+		margin: 0 10px 0 0;
+	}
+	#flickr p {
+		margin: 0 0 10px;
+		font: 11px Arial, Helvetica, Sans serif
 	}
 
 

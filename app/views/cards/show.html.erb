@@ -6,11 +6,11 @@
 	<% if @card.avatar_file_name %>
 		<div class="thumb"><%= image_tag @card.avatar.url(:thumb) %></div>
 	<% end %>
+	<% if !@card.company.blank? %><div class="company"><%= @card.company %></div><% end %>
 	<%= link_to "Edit card", edit_card_path %>
 	<%= link_to "Delete card", '', :method => :delete %>
 	<ul>
 		<li><strong>Website:</strong> <% if !@card.website.blank? %><%= link_to @card.website, @card.website %><% else %>no website<% end%> </li>
-		<li><strong></strong></li>
 	</ul>
 
 	<% if !@card.street.nil? %>
