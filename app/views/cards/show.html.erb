@@ -14,7 +14,9 @@
 		<li><strong></strong></li>
 	</ul>
 	
-	<%= image_tag @card.avatar.url(:thumb) %>
+	<% if @card.avatar_file_name %>
+		<%= image_tag @card.avatar.url(:thumb) %>
+	<% end %>
 	
 	<a href="#">Download the data</a>
 </div>

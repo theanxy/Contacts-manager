@@ -1,8 +1,8 @@
-<p>Choose one of the cards</p>
 <select id="cards-list">
-	<% @cards.each do |card| %>
-		<option name="<%= card.id %>"><%= card.name %></option>
-	<% end -%>
+		<option disabled="disabled">Pick the card</option>
+		<% @cards.each do |card| %>
+		<option name="<%= card.id %>"<% if @card != nil && card.id == @card.id %> selected="selected"<% end %>><%= card.name %></option>
+		<% end -%>
 </select>
 
 <p>or… <br><%= link_to "Create new card", new_card_path %></p>
