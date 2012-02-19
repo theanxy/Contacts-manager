@@ -78,6 +78,10 @@
 		text-align: right;
 	}
 	
+	#content {
+		position: relative;
+	}
+	
 	
 	#footer {
 		clear: both;
@@ -109,6 +113,7 @@
 		margin: 50px 0 0;
 	}
 	#profile {
+		position: relative;
 		background: #f9f9f9;
 		border: 1px solid #999;
 		padding: 15px 20px;
@@ -116,6 +121,12 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 		border-radius: 10px;
+	}
+	
+	.thumb {
+		position: absolute;
+		top: 20px;
+		right: 20px;
 	}
 
 

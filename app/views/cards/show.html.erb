@@ -1,28 +1,27 @@
-<h2>Available cards</h2>
-	
 <div class="three columns">
 	<%= render 'cards/list' %>
 </div>
 <div class="ten columns" id="profile">
-	<h3><%= @card.name %></h3>
+	<h2><%= @card.name %></h2>
+	<% if @card.avatar_file_name %>
+		<div class="thumb"><%= image_tag @card.avatar.url(:thumb) %></div>
+	<% end %>
 	<%= link_to "Edit card", edit_card_path %>
 	<%= link_to "Delete card", '', :method => :delete %>
 	<ul>
 		<li><strong>Website:</strong> <% if !@card.website.blank? %><%= link_to @card.website, @card.website %><% else %>no website<% end%> </li>
-		<li><strong>Photo:</strong></li>
-		<li><strong>Address:</strong></li>
 		<li><strong></strong></li>
 	</ul>
-	
-	<% if @card.avatar_file_name %>
-		<%= image_tag @card.avatar.url(:thumb) %>
+
+	<% if !@card.street.nil? %>
+	<% @adr = @card.street+','+@card.city %>
+	<% @adr.gsub(/,*\s+/,'+') %>
+	<img class="map" src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @adr %>&size=530x200&maptype=roadmap&sensor=false" alt="Map">
 	<% end %>
 	
 	<a href="#">Download the data</a>
 </div>
 <div class="three columns">
-<h5>Recent activity</h5>
-
 <% if !@card.twitter.blank? %>
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
