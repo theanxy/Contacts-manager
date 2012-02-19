@@ -109,6 +109,14 @@
 		margin: 0;
 	}
 	
+	.breadcrumbs {
+		margin: -15px 0 20px;
+		color: #999;
+	}
+	.breadcrumbs strong {
+		color: #666;
+	}
+	
 	#content {
 		position: relative;
 	}
