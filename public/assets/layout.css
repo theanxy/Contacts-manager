@@ -57,11 +57,16 @@
 	
 	h1 {
 		text-align: center;
-		margin: 10px 0 40px;
+		margin: 60px 0 0;
 	}
 	h1 a {
 		background: url(vcard.png) no-repeat 0 55%;
 		padding-left: 50px;
+	}
+	header .slogan {
+		text-align: center;
+		margin: 5px 0 60px;
+		font-style: italic;
 	}
 	h2 {
 		margin: 20px 0 30px;
@@ -111,7 +116,10 @@
 	
 	#footer {
 		clear: both;
-		padding: 100px 0 0;
+		border-top: 1px solid #ddd;
+		color: #999;
+		margin: 100px 0 0;
+		padding: 10px 0;
 	}
 
 
@@ -123,7 +131,7 @@
 		text-align: center;
 		margin: 50px 0 0;
 	}
-	#profile {
+	#card {
 		position: relative;
 		background: #f9f9f9;
 		border: 1px solid #999;
@@ -133,10 +141,10 @@
         box-sizing: border-box;
 		border-radius: 10px;
 	}
-	#profile h2 {
+	#card h2 {
 		margin: .5em 0 0;
 	}
-	#profile .company {
+	#card .company {
 		text-transform: uppercase;
 		font-weight: bold;
 		margin: 0 0 2em;
@@ -145,6 +153,15 @@
 		position: absolute;
 		top: 20px;
 		right: 20px;
+	}
+	#card .meta li {
+		margin: 20px 10px 0 0;
+		display: inline-block;
+	}
+	
+	#cards-list {
+		font-weight: bold;
+		font-size: 1.1em;
 	}
 	
 	/* Flickr badge defaults styles */
