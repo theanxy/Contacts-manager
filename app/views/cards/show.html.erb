@@ -12,7 +12,7 @@
 		<% if !@card.phone.blank? %><li><strong>Phone:</strong> <%= @card.phone %><% end%></li>
 	</ul>
 
-	<% if !@card.street.nil? %>
+	<% if !@card.street.blank? %>
 	<% @adr = @card.street+','+@card.city %>
 	<% @adr.gsub(/,*\s+/,'+') %>
 	<img class="map" src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @adr %>&size=530x200&maptype=roadmap&sensor=false" alt="Map">
