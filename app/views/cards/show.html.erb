@@ -19,8 +19,10 @@
 	<% end %>
 	
 	<ul class="meta">
+		<% if @card.owner == current_user.id %>
 		<li><%= link_to "Edit card", edit_card_path %></li>
 		<li><%= link_to "Delete card", '', :method => :delete %></li>
+		<% end %>
 		<li><a href="#">Download the data</a></li>
 	</ul>
 </div>
