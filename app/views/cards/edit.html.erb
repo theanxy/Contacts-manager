@@ -30,6 +30,10 @@
 				<%= f.label :phone, "Phone:" %><br>
 				<%= f.text_field :phone %>
 			</p>
+			<p>
+				<%= f.check_box :public %>
+				<%= f.label :public, "Make this card public" %>
+			</p>
 			<%= f.file_field :avatar %>
 		</li>
 		<li id="address">

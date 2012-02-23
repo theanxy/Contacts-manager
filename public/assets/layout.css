@@ -190,6 +190,12 @@
 		margin: 0 0 10px;
 		font: 11px Arial, Helvetica, Sans serif
 	}
+	
+	/* Card form */
+	#card_public {
+		float: left;
+		margin-right: 5px;
+	}
 
 
 /* #Media Queries
