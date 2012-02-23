@@ -1,15 +1,15 @@
 <div class="three columns">
 	<%= render 'cards/list' %>
 </div>
-<div class="ten columns" id="card">
-	<h2><%= @card.name %></h2>
+<div class="ten columns vcard" id="card">
+	<h2 class="fn"><%= @card.name %></h2>
 	<% if @card.avatar_file_name %>
-		<div class="thumb"><%= image_tag @card.avatar.url(:thumb) %></div>
+		<div class="photo"><%= image_tag @card.avatar.url(:thumb) %></div>
 	<% end %>
-	<% if !@card.company.blank? %><div class="company"><%= @card.company %></div><% end %>
+	<% if !@card.company.blank? %><div class="org"><%= @card.company %></div><% end %>
 	<ul>
-		<% if !@card.website.blank? %><li><strong>Website:</strong> <%= link_to @card.website, @card.website %></li><% end %>
-		<% if !@card.phone.blank? %><li><strong>Phone:</strong> <%= @card.phone %><% end%></li>
+		<% if !@card.website.blank? %><li><strong>Website:</strong> <%= link_to @card.website, @card.website, :class => "url" %></li><% end %>
+		<% if !@card.phone.blank? %><li><strong>Phone:</strong> <span class="tel"><%= @card.phone %></span></li><% end%>
 	</ul>
 
 	<% if !@card.street.blank? %>

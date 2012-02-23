@@ -152,12 +152,12 @@
 	#card h2 {
 		margin: .5em 0 0;
 	}
-	#card .company {
+	#card .org {
 		text-transform: uppercase;
 		font-weight: bold;
 		margin: 0 0 2em;
 	}
-	.thumb {
+	.photo {
 		position: absolute;
 		top: 20px;
 		right: 20px;
