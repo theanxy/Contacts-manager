@@ -72,6 +72,11 @@
 		margin: 20px 0 30px;
 	}
 	
+	dt {
+		font-weight: bold;
+		margin: 0 0 5px;
+	}
+	
 	header nav {
 		background: #eee;
 		color: #fff;
