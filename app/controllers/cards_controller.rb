@@ -28,16 +28,24 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card = Card.find(params[:id])
-    if @card.update_attributes(params[:card])
-       redirect_to :action => 'show'
+    if !Card.find(params[:id]).owner == current_user.id
+      flash[:notice] = "Don't hack the system!"
     else
-       render :action => 'edit'
+      @card = Card.find(params[:id])
+      if @card.update_attributes(params[:card])
+         redirect_to :action => 'show'
+      else
+         render :action => 'edit'
+      end
     end
   end
 
   def destroy
-    Card.find(params[:id]).delete
+    if Card.find(params[:id]).owner == current_user.id
+      Card.find(params[:id]).delete
+    else
+      flash[:notice] = "Don't hack the system!"
+    end
     redirect_to :action => "index"
   end
 
