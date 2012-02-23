@@ -65,5 +65,7 @@
 		</li>
 	</ul>
 	
+	<input type="hidden" id="card_owner" name="card[owner]" value="<%= current_user.id %>">
+	
 	<%= f.submit "Add"%>
 <% end %>

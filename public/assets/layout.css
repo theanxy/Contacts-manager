@@ -167,8 +167,7 @@
 		display: inline-block;
 	}
 	
-	#cards-list {
-		font-weight: bold;
+	#content select {
 		font-size: 1.1em;
 	}
 	
