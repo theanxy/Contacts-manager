@@ -1,6 +1,6 @@
 <select id="cards-list">
-		<option disabled="disabled">Public cards</option>
-		<% @cards.where("public = 1").each do |card| %>
+		<option disabled="disabled">Others’ cards</option>
+		<% @cards.where("public = 1 AND owner != ?", current_user.id).each do |card| %>
 		<option name="<%= card.id %>"<% if @card != nil && card.id == @card.id %> selected="selected"<% end %>><%= card.name %></option>
 		<% end -%>
 </select>
